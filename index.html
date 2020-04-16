@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Prudenca Ahmad Daffa Kurnia">
+    <meta property="og:image" content="/dist/static/banner.jpg">
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:site_name" content="daffagithub08.github.io">
+    <meta property="og:description" content="Saya Prudenca Ahmad Daffa Kurnia,Saya Web Developer dan Software Enginering">
+    <meta name="google-site-verification" content="6P9d48s8uFAUjQEC8nXZg3Rcexh5Vew8P6m7dsxuQ7w">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Prudenca Ahmad Daffa Kurnia</title>
+    <link rel="stylesheet" href="./dist/css/spectre.min.css">
+    <link rel="stylesheet" href="./dist/css/spectre-icons.min.css">
+    <link rel="stylesheet" href="./dist/css/spectre-exp.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153559478-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-153559478-1');
+    </script>
+    </link>
+
+    <body>
+        <div class="container mt-2" id="app">
+            <div class="columns">
+                <!-- Tabs Navigation -->
+                <!-- <div class="column col-12">
+          <ul class="tab tab-block">
+            <li class="tab-item">
+              <a href="#">Music</a>
+            </li>
+            <li class="tab-item">
+              <a href="#" class="active">Playlists</a>
+            </li>
+            <li class="tab-item">
+              <a href="#">Radio</a>
+            </li>
+            <li class="tab-item">
+              <a href="#">Connect</a>
+            </li>
+          </ul>
+        </div> -->
+                <!-- End Tabs Navigation -->
+                <div class="column mt-1 col-6 col-sm-12">
+                    <div class="panel">
+                        <div class="panel-header text-center">
+                            <figure class="avatar avatar-lg tooltip tooltip-right" data-tooltip="My telegram profile photo"><img :src="photo == null ? `./dist/static/avatar.png` : photo" alt="Avatar"></figure>
+                            <div class="panel-title h5 mt-10">{{ myname }}</div>
+                            <div class="panel-subtitle" v-html="mystory"></div>
+                            </figure>
+                            <div class="panel-body">
+                                <div class="tile tile-centered">
+                                    <div class="tile-content">
+                                        <div class="tile-title text-bold">E-mail</div>
+                                        <div class="tile-subtitle">{{ social.email }}</div>
+                                    </div>
+                                    <div class="tile-action">
+                                        <a :href="`mailto:${social.email}`" target="_blank">
+                                            <button class="btn btn-link btn-action btn-lg tooltip tooltip-left" data-tooltip="Send message 📧"><i class="icon icon-mail"></i></button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tile tile-centered">
+                                    <div class="tile-content">
+                                        <div class="tile-title text-bold">Telegram</div>
+                                        <div class="tile-subtitle">daffa08</div>
+                                    </div>
+                                    <div class="tile-action">
+                                        <a :href="`tg://resolve?domain=${social.tg}`" target="_blank">
+                                            <button class="btn btn-link btn-action btn-lg tooltip tooltip-left" data-tooltip="Chat with me 💬"><i class="icon icon-message"></i></button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tile tile-centered">
+                                    <div class="tile-content">
+                                        <div class="tile-title text-bold">Github</div>
+                                        <div class="tile-subtitle">daffagithub08</div>
+                                    </div>
+                                    <div class="tile-action">
+                                        <a :href="`https://github.com/${social.git}`" target="_blank">
+                                            <button class="btn btn-link btn-action btn-lg tooltip tooltip-left" data-tooltip="Check my project ⚡"><i class="icon icon-resize-horiz"></i></button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="tile tile-centered">
+                                    <div class="tile-content">
+                                        <div class="tile-title text-bold">Lokasi</div>
+                                        <div class="tile-subtitle">Kudus, Jawa Tengah</div>
+                                    </div>
+                                    <div class="tile-action">
+                                        <a :href="`https://www.google.com/maps?hl=id${social.maps}`" target="_blank">
+                                            <button class="btn btn-link btn-action btn-lg tooltip tooltip-left" data-tooltip="My position 📍"><i class="icon icon-location"></i></button>
+                                        </a>
+                                    </div>
+                                    <!-- <div class="tile-action">
+                  <button class="btn btn-link btn-action btn-lg"><i class="icon icon-edit"></i></button>
+                </div> -->
+                                </div>
+                            </div>
+                            <div class="panel-footer">
+                                <span class="float-right tooltip tooltip-left" data-tooltip="Some information is taken from my telegram ID">
+                <i class="icon icon-time"></i>
+              </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column mt-1 col-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title h5">Tentang Saya</div>
+                                <div class="card-subtitle text-gray">Perkenalkan Saya</div>
+                            </div>
+                            <div class="card-body" v-html="aboutme">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column mt-1 col-6 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title h5">Kesukaan Saya</div>
+                                <div class="card-subtitle text-gray">Semua yang saya sukai</div>
+                            </div>
+                            <div class="card-body">
+                                <span class="label label-rounded mt-1 tooltip" data-tooltip="Visual Studio Code">Code Editor</span>
+                                <span class="label label-rounded mt-1 tooltip" data-tooltip="JavaScript">Bahasa Pemrograman</span>
+                                <span class="label label-rounded mt-1 tooltip" data-tooltip="Telegram">Sosial Media</span>
+                                <span class="label label-rounded label-warning mt-1">Akan Datang..</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="min-height: 30px; margin-top: 15px;">
+                    <div class="divider text-center mb-2" data-content="Built with &hearts; By Prudenca Ahmad Daffa Kurnia"></div>
+                </div>
+            </div>
+            <!-- vue -->
+            <script src="./dist/js/vue.js"></script>
+            <!-- axios -->
+            <script src="./dist/js/axios.min.js"></script>
+            <!-- main app -->
+            <script src="./dist/js/app.js"></script>
+    </body>
+
+</html>
