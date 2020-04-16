@@ -7,7 +7,7 @@ let app = new Vue({
         social: {
             email: 'prudencaahdaffa08@gmail.com',
             tg: 'daffa08',
-            git: 'prudenca08github08'
+            git: 'prudenca08'
         },
         aboutme: `
   <p>Hello 👋, Nama Saya Prudenca Ahmad Daffa, Saya beragama muslim dan tinggal di Kudus (Indonesia 🆔)</p>
